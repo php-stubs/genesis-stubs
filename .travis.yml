@@ -21,7 +21,7 @@ before_install:
   - "composer validate --strict"
 
 install:
-  - "wget -P source 'https://my.studiopress.com/?download_id=91046d629e74d525b3f2978e404e7ffa'"
+  - "wget --content-disposition -P source 'https://my.studiopress.com/?download_id=91046d629e74d525b3f2978e404e7ffa'"
   - "unzip -d source source/genesis.*.zip"
   - "composer update --no-interaction --no-suggest"
 
