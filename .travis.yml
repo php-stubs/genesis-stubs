@@ -30,4 +30,4 @@ script:
   - "php -l genesis-stubs.php"
   - "git diff --exit-code"
   - |
-    php -r 'require "vendor/php-stubs/wordpress-stubs/wordpress-stubs.php"; require "genesis-stubs";'
+    php -r 'require "vendor/php-stubs/wordpress-stubs/wordpress-stubs.php"; require "genesis-stubs.php";'
