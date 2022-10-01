@@ -3461,4 +3461,1445 @@ namespace {
     function genesis_sidebar_title($id)
     {
     }
+    /**
+     * Add custom heading and / or description to category / tag / taxonomy archive pages.
+     *
+     * If the page is not a category, tag or taxonomy term archive, or there's no term, or
+     * no term meta set, then nothing extra is displayed.
+     *
+     * If there's a title to display, it is marked up as a level 1 heading.
+     *
+     * If there's a description to display, it runs through `wpautop()`,
+     * `do_shortcode()` and `autoembed()` before being added to a div.
+     *
+     * @since 2.10.0 Filter intro text with `do_shortcode()` and `autoembed()`.
+     * @since 1.3.0
+     *
+     * @global WP_Query $wp_query Query object.
+     * @global WP_Embed $wp_embed Embed object.
+     *
+     * @return void Return early if not the correct archive page, or no term is found.
+     */
+    function genesis_do_taxonomy_title_description()
+    {
+    }
+    /**
+     * Add custom headline and description to author archive pages.
+     *
+     * If we're not on an author archive page, then nothing extra is displayed.
+     *
+     * If there's a custom headline to display, it is marked up as a level 1 heading.
+     *
+     * If there's a description (intro text) to display, it is run through `wpautop()` before being added to a div.
+     *
+     * @since 1.4.0
+     *
+     * @return void Return early if not author archive.
+     */
+    function genesis_do_author_title_description()
+    {
+    }
+    /**
+     * Add author box to the top of author archive.
+     *
+     * If the headline and description are set to display the author box appears underneath them.
+     *
+     * @since 1.4.0
+     *
+     * @see genesis_do_author_title_and_description Author title and description.
+     *
+     * @return void Return early if not author archive or not page one.
+     */
+    function genesis_do_author_box_archive()
+    {
+    }
+    /**
+     * Add custom headline and description to relevant custom post type archive pages.
+     *
+     * If we're not on a post type archive page, then nothing extra is displayed.
+     *
+     * If there's a custom headline to display, it is marked up as a level 1 heading.
+     *
+     * If there's a description (intro text) to display, it is run through wpautop() before being added to a div.
+     *
+     * @since 2.0.0
+     *
+     * @return void Return early if not on post type archive or post type does not
+     *              have `genesis-cpt-archives-settings` support
+     */
+    function genesis_do_cpt_archive_title_description()
+    {
+    }
+    /**
+     * Add custom heading to date archive pages.
+     *
+     * If we're not on a date archive page, then nothing extra is displayed.
+     *
+     * @since 2.2.0
+     *
+     * @return void Return early if not on date archive.
+     */
+    function genesis_do_date_archive_title()
+    {
+    }
+    /**
+     * Add custom heading and description to blog template pages.
+     *
+     * If we're not on a blog template page, then nothing extra is displayed.
+     *
+     * @since 2.2.0
+     *
+     * @return void Return early if not on blog template archive, or `headings` is not
+     *              enabled for Genesis accessibility.
+     */
+    function genesis_do_blog_template_heading()
+    {
+    }
+    /**
+     * Add custom heading to assigned posts page.
+     *
+     * If we're not on a posts page, then nothing extra is displayed.
+     *
+     * @since 2.2.1
+     *
+     * @return void Return early if `headings` is not enabled for Genesis accessibility, there is no
+     *              page for posts assigned, this is not the home (posts) page, or this is not the page found at `/`.
+     */
+    function genesis_do_posts_page_heading()
+    {
+    }
+    /**
+     * Add open markup for archive headings to archive pages.
+     *
+     * @since 2.5.0
+     *
+     * @param string $heading    Optional. Archive heading, default is empty string.
+     * @param string $intro_text Optional. Archive intro text, default is empty string.
+     * @param string $context    Optional. Archive context, default is empty string.
+     */
+    function genesis_do_archive_headings_open($heading = '', $intro_text = '', $context = '')
+    {
+    }
+    /**
+     * Add close markup for archive headings to archive pages.
+     *
+     * @since 2.5.0
+     *
+     * @param string $heading    Optional. Archive heading, default is empty string.
+     * @param string $intro_text Optional. Archive intro text, default is empty string.
+     * @param string $context    Optional. Archive context, default is empty string.
+     */
+    function genesis_do_archive_headings_close($heading = '', $intro_text = '', $context = '')
+    {
+    }
+    /**
+     * Add headline for archive headings to archive pages.
+     *
+     * @since 2.5.0
+     *
+     * @param string $heading    Optional. Archive heading, default is empty string.
+     * @param string $intro_text Optional. Archive intro text, default is empty string.
+     * @param string $context    Optional. Archive context, default is empty string.
+     */
+    function genesis_do_archive_headings_headline($heading = '', $intro_text = '', $context = '')
+    {
+    }
+    /**
+     * Add intro text for archive headings to archive pages.
+     *
+     * @since 2.5.0
+     *
+     * @param string $heading    Optional. Archive heading, default is empty string.
+     * @param string $intro_text Optional. Archive intro text, default is empty string.
+     * @param string $context    Optional. Archive context, default is empty string.
+     */
+    function genesis_do_archive_headings_intro_text($heading = '', $intro_text = '', $context = '')
+    {
+    }
+    /**
+     * Output the comments at the end of entries.
+     *
+     * Load comments only if we are on a post, page, or CPT that supports comments, and only if comments or trackbacks are enabled.
+     *
+     * @since 1.1.0
+     *
+     * @return void Return early if post type does not support `comments`.
+     */
+    function genesis_get_comments_template()
+    {
+    }
+    /**
+     * Echo Genesis default comment structure.
+     *
+     * Does the `genesis_list_comments` action.
+     *
+     * Applies the `genesis_title_comments`, `genesis_prev_comments_link_text`, `genesis_next_comments_link_text`,
+     * `genesis_no_comments_text` and `genesis_comments_closed_text` filters.
+     *
+     * @since 1.1.2
+     *
+     * @global WP_Query $wp_query Query object.
+     *
+     * @return void Return early if on a page with Genesis page comments off, or on a post with Genesis post comments off.
+     */
+    function genesis_do_comments()
+    {
+    }
+    /**
+     * Echo Genesis default trackback structure.
+     *
+     * Does the `genesis_list_args` action.
+     *
+     * Applies the `genesis_no_pings_text` filter.
+     *
+     * @since 1.1.2
+     *
+     * @global WP_Query $wp_query Query object.
+     *
+     * @return void Return early if on a page with Genesis page trackbacks off, or on a
+     *              post with Genesis post trackbacks off.
+     */
+    function genesis_do_pings()
+    {
+    }
+    /**
+     * Output the list of comments.
+     *
+     * Applies the `genesis_comment_list_args` filter.
+     *
+     * @since 1.0.0
+     *
+     * @see genesis_html5_comment_callback() HTML5 callback.
+     * @see genesis_comment_callback()       XHTML callback.
+     */
+    function genesis_default_list_comments()
+    {
+    }
+    /**
+     * Output the list of trackbacks.
+     *
+     * Applies the `genesis_ping_list_args` filter.
+     *
+     * @since 1.0.0
+     */
+    function genesis_default_list_pings()
+    {
+    }
+    /**
+     * Comment callback for {@link genesis_default_list_comments()} if HTML5 is active.
+     *
+     * Does `genesis_before_comment` and `genesis_after_comment` actions.
+     *
+     * Applies `comment_author_says_text` and `genesis_comment_awaiting_moderation` filters.
+     *
+     * @since 2.0.0
+     *
+     * @param stdClass $comment Comment object.
+     * @param array    $args    Comment args.
+     * @param int      $depth   Depth of current comment.
+     */
+    function genesis_html5_comment_callback($comment, array $args, $depth)
+    {
+    }
+    /**
+     * Optionally show the comment form.
+     *
+     * Genesis asks WP for the HTML5 version of the comment form - it uses {@link genesis_comment_form_args()} to revert to
+     * XHTML form fields when child theme does not support HTML5.
+     *
+     * @since 1.0.0
+     *
+     * @return void Return early if comments are closed via Genesis for this page or post.
+     */
+    function genesis_do_comment_form()
+    {
+    }
+    /**
+     * Filter the comments link. If post has comments, link to #comments div. If no, link to #respond div.
+     *
+     * @since 2.0.1
+     *
+     * @param string      $link    Post comments permalink with '#comments' appended.
+     * @param int|WP_Post $post_id Post ID or WP_Post object.
+     * @return string URL to comments if they exist, otherwise URL to the comment form.
+     */
+    function genesis_comments_link_filter($link, $post_id)
+    {
+    }
+    /**
+     * Are comments enabled in Genesis at Theme Settings → Comments and Trackbacks?
+     *
+     * @since 3.3.0
+     *
+     * @return bool True if comments are enabled for this post type.
+     */
+    function genesis_comments_enabled()
+    {
+    }
+    /**
+     * Are trackbacks enabled in Genesis at Theme Settings → Comments and Trackbacks?
+     *
+     * @since 3.3.0
+     *
+     * @return bool True if trackbacks are enabled for this post type.
+     */
+    function genesis_trackbacks_enabled()
+    {
+    }
+    /**
+     * Are trackbacks or comments appearing on the current post?
+     *
+     * Used to improve heading level hierarchy in comments.php if comments or
+     * trackbacks are visible.
+     *
+     * @since 3.3.0
+     *
+     * @return bool True if trackbacks or comments are showing on the current post.
+     */
+    function genesis_comments_trackbacks_showing()
+    {
+    }
+    /**
+     * Genesis Framework.
+     *
+     * WARNING: This file is part of the core Genesis Framework. DO NOT edit this file under any circumstances.
+     * Please do all modifications in the form of a child theme.
+     *
+     * @package Genesis\Footer
+     * @author  StudioPress
+     * @license GPL-2.0-or-later
+     * @link    https://my.studiopress.com/themes/genesis/
+     */
+    /**
+     * Are footer widgets hidden for the current page?
+     *
+     * Indicates that the “Hide Footer Widgets” checkbox is enabled and checked.
+     *
+     * @since 3.2.0
+     *
+     * @return bool True if footer widgets are hidden, false otherwise.
+     */
+    function genesis_footer_widgets_hidden_on_current_page()
+    {
+    }
+    /**
+     * Echo the markup necessary to facilitate the footer widget areas.
+     *
+     * Check for a numerical parameter given when adding theme support - if none is found, then the function returns early.
+     *
+     * The child theme must style the widget areas.
+     *
+     * Applies the `genesis_footer_widget_areas` filter.
+     *
+     * @since 1.6.0
+     *
+     * @return void Return early if number of widget areas could not be determined,
+     *              or nothing is added to the first widget area.
+     */
+    function genesis_footer_widget_areas()
+    {
+    }
+    /**
+     * Echo the opening div tag for the footer.
+     *
+     * Also optionally adds wrapping div opening tag.
+     *
+     * @since 1.2.0
+     */
+    function genesis_footer_markup_open()
+    {
+    }
+    /**
+     * Echo the closing div tag for the footer.
+     *
+     * Also optionally adds wrapping div closing tag.
+     *
+     * @since 1.2.0
+     */
+    function genesis_footer_markup_close()
+    {
+    }
+    /**
+     * Echo the contents of the footer including processed shortcodes.
+     *
+     * Applies `genesis_footer_creds_text` and `genesis_footer_output` filters.
+     *
+     * @since 3.0.0 Removed `[footer_backtotop]` shortcode and `genesis_footer_backtotop_text` filter.
+     * @since 1.0.1
+     */
+    function genesis_do_footer()
+    {
+    }
+    /**
+     * Echo the footer scripts, defined in Theme Settings.
+     *
+     * Applies the `genesis_footer_scripts` filter to the value returns from the footer_scripts option.
+     *
+     * Also outputs page-specific body scripts if their position is set to 'bottom'.
+     *
+     * @since 1.1.0
+     */
+    function genesis_footer_scripts()
+    {
+    }
+    /**
+     * Echo the doctype and opening markup.
+     *
+     * If you are going to replace the doctype with a custom one, you must remember to include the opening <html> and
+     * <head> elements too, along with the proper attributes.
+     *
+     * It would be beneficial to also include the <meta> tag for content type.
+     *
+     * The default doctype is XHTML v1.0 Transitional, unless HTML support os present in the child theme.
+     *
+     * @since 1.3.0
+     * @since 3.0.0 Removed xhtml logic.
+     */
+    function genesis_do_doctype()
+    {
+    }
+    /**
+     * HTML5 doctype markup.
+     *
+     * @since 2.0.0
+     */
+    function genesis_html5_doctype()
+    {
+    }
+    /**
+     * Filter Document title parts based on context and SEO settings values.
+     *
+     * @since 2.6.0
+     *
+     * @param array $parts The document title parts.
+     * @return array Return modified array of title parts.
+     */
+    function genesis_document_title_parts($parts)
+    {
+    }
+    /**
+     * Filter Document title parts separator based on SEO setting value.
+     *
+     * @since 2.6.0
+     *
+     * @param string $sep The title parts separator.
+     * @return string Return modified title parts separator.
+     */
+    function genesis_document_title_separator($sep)
+    {
+    }
+    /**
+     * Remove unnecessary code that WordPress puts in the `head`.
+     *
+     * @since 1.3.0
+     */
+    function genesis_doc_head_control()
+    {
+    }
+    /**
+     * Output the meta description based on contextual criteria.
+     *
+     * Output nothing if description isn't present.
+     *
+     * @since 1.2.0
+     * @since 2.4.0 Logic moved to `genesis_get_seo_meta_description()`
+     *
+     * @see genesis_get_seo_meta_description()
+     */
+    function genesis_seo_meta_description()
+    {
+    }
+    /**
+     * Output the meta keywords based on contextual criteria.
+     *
+     * Outputs nothing if keywords are not present.
+     *
+     * @since 1.2.0
+     * @since 2.4.0 Logic moved to `genesis_get_seo_meta_keywords()`
+     *
+     * @see genesis_get_seo_meta_keywords()
+     */
+    function genesis_seo_meta_keywords()
+    {
+    }
+    /**
+     * Output the robots meta code in the document `head`.
+     *
+     * @since 1.0.0
+     * @since 2.4.0 Logic moved to `genesis_get_robots_meta_content()`
+     *
+     * @see genesis_get_robots_meta_content()
+     *
+     * @return void Return early if blog is not public.
+     */
+    function genesis_robots_meta()
+    {
+    }
+    /**
+     * Outputs the responsive CSS viewport tag.
+     *
+     * Applies `genesis_viewport_value` filter on content attribute.
+     *
+     * @since 1.9.0
+     * @since 2.7.0 Adds `minimum-scale=1` when AMP URL.
+     * @since 3.0 Do not check if theme supports `genesis-responsive-viewport`.
+     */
+    function genesis_responsive_viewport()
+    {
+    }
+    /**
+     * Echo favicon link.
+     *
+     * @since 1.0.0
+     * @since 2.4.0 Logic moved to `genesis_get_favicon_url()`.
+     *
+     * @see genesis_get_favicon_url()
+     *
+     * @return void Return early if WP Site Icon is used.
+     */
+    function genesis_load_favicon()
+    {
+    }
+    /**
+     * Adds the pingback meta tag to the head so that other sites can know how to send a pingback to our site.
+     *
+     * @since 1.3.0
+     */
+    function genesis_do_meta_pingback()
+    {
+    }
+    /**
+     * Output rel links in the head to indicate previous and next pages in paginated archives and posts.
+     *
+     * @link https://webmasters.googleblog.com/2011/09/pagination-with-relnext-and-relprev.html
+     *
+     * @since 2.2.0
+     *
+     * @return void Return early if doing a Customizer preview.
+     */
+    function genesis_paged_rel()
+    {
+    }
+    /**
+     * Output meta tag for site name.
+     *
+     * @since 2.2.0
+     *
+     * @return void Return early if not HTML5 or not front page.
+     */
+    function genesis_meta_name()
+    {
+    }
+    /**
+     * Output meta tag for site URL.
+     *
+     * @since 2.2.0
+     *
+     * @return void Return early if not HTML5 or not front page.
+     */
+    function genesis_meta_url()
+    {
+    }
+    /**
+     * Echo custom canonical link tag.
+     *
+     * Remove the default WordPress canonical tag, and use our custom
+     * one. Gives us more flexibility and effectiveness.
+     *
+     * @since 1.0.0
+     */
+    function genesis_canonical()
+    {
+    }
+    /**
+     * Echo header scripts in to wp_head().
+     *
+     * Allows shortcodes.
+     *
+     * Applies `genesis_header_scripts` filter on value stored in header_scripts setting.
+     *
+     * Also echoes scripts from the post's custom field.
+     *
+     * @since 1.0.0
+     */
+    function genesis_header_scripts()
+    {
+    }
+    /**
+     * Output page-specific body scripts if their position is set to 'top'.
+     *
+     * If the position is 'bottom' or null, output occurs in genesis_footer_scripts() instead.
+     *
+     * @since 2.5.0
+     */
+    function genesis_page_specific_body_scripts()
+    {
+    }
+    /**
+     * Activate the custom header feature.
+     *
+     * It gets arguments passed through add_theme_support(), defines the constants, and calls `add_custom_image_header()`.
+     *
+     * Applies `genesis_custom_header_defaults` filter.
+     *
+     * @since 1.6.0
+     *
+     * @return void Return early if `custom-header` or `genesis-custom-header` are not supported in the theme.
+     */
+    function genesis_custom_header()
+    {
+    }
+    /**
+     * Add support for the WordPress custom logo feature.
+     *
+     * Passes add_theme_support() arguments from `genesis-custom-logo` to `custom-logo`.
+     *
+     * Applies `genesis_custom_logo_defaults` filter.
+     *
+     * @since 3.1.0
+     *
+     * @return void Return early if `custom-logo` is supported or `genesis-custom-logo` is not supported in the theme.
+     */
+    function genesis_custom_logo()
+    {
+    }
+    /**
+     * Custom header callback.
+     *
+     * It outputs special CSS to the document head, modifying the look of the header based on user input.
+     *
+     * @since 1.6.0
+     *
+     * @return void Return early if `custom-header` not supported, user specified own callback, or no options set.
+     */
+    function genesis_custom_header_style()
+    {
+    }
+    /**
+     * Echo the opening structural markup for the header.
+     *
+     * @since 1.2.0
+     */
+    function genesis_header_markup_open()
+    {
+    }
+    /**
+     * Echo the opening structural markup for the header.
+     *
+     * @since 1.2.0
+     */
+    function genesis_header_markup_close()
+    {
+    }
+    /**
+     * Echo the default header, including the #title-area div, along with #title and #description, as well as the .widget-area.
+     *
+     * Does the `genesis_site_title`, `genesis_site_description` and `genesis_header_right` actions.
+     *
+     * @since 1.0.2
+     *
+     * @global $wp_registered_sidebars Holds all of the registered sidebars.
+     */
+    function genesis_do_header()
+    {
+    }
+    /**
+     * Adds the WordPress custom logo inside the title area, before the site title hook.
+     *
+     * @since 3.1.0
+     */
+    function genesis_output_custom_logo()
+    {
+    }
+    /**
+     * Echo the site title into the header.
+     *
+     * Depending on the SEO option set by the user, this will either be wrapped in an `h1` or `p` element.
+     * The Site Title will be wrapped in a link to the homepage, if a custom logo is not in use.
+     *
+     * Applies the `genesis_seo_title` filter before echoing.
+     *
+     * @since 1.1.0
+     */
+    function genesis_seo_site_title()
+    {
+    }
+    /**
+     * Echo the site description into the header.
+     *
+     * Depending on the SEO option set by the user, this will either be wrapped in an `h1` or `p` element.
+     *
+     * Applies the `genesis_seo_description` filter before echoing.
+     *
+     * @since 1.1.0
+     */
+    function genesis_seo_site_description()
+    {
+    }
+    /**
+     * Sets attributes for the custom menu widget if used in the Header Right widget area.
+     *
+     * @since 1.9.0
+     *
+     * @param array $args Navigation menu arguments.
+     * @return array $args Arguments for custom menu widget used in Header Right widget area.
+     */
+    function genesis_header_menu_args($args)
+    {
+    }
+    /**
+     * Wrap the header navigation menu in its own nav tags with markup API.
+     *
+     * @since 2.0.0
+     *
+     * @param string $menu Menu output.
+     * @return string $menu Modified menu output, or original if not HTML5.
+     */
+    function genesis_header_menu_wrap($menu)
+    {
+    }
+    /**
+     * Add skip links for screen readers and keyboard navigation.
+     *
+     * @since 2.2.0
+     *
+     * @return void Return early if skip links are not supported.
+     */
+    function genesis_skip_links()
+    {
+    }
+    /**
+     * Filter the content width based on the user selected layout.
+     *
+     * @since 1.6.0
+     *
+     * @param int $default Default width.
+     * @param int $small   Small width.
+     * @param int $large   Large width.
+     * @return int Content width.
+     */
+    function genesis_content_width($default, $small, $large)
+    {
+    }
+    /**
+     * Add custom field body class(es) to the body classes.
+     *
+     * It accepts values from a per-post or per-page custom field, and only outputs when viewing a singular page.
+     *
+     * @since 1.4.0
+     *
+     * @param array $classes Existing body classes.
+     * @return array Amended body classes.
+     */
+    function genesis_custom_body_class(array $classes)
+    {
+    }
+    /**
+     * Add header-* classes to the body class.
+     *
+     * We can use pseudo-variables in our CSS file, which helps us achieve multiple header layouts with minimal code.
+     *
+     * @since 1.0.0
+     *
+     * @param array $classes Existing body classes.
+     * @return array Amended body classes.
+     */
+    function genesis_header_body_classes(array $classes)
+    {
+    }
+    /**
+     * Add site layout classes to the body classes.
+     *
+     * We can use pseudo-variables in our CSS file, which helps us achieve multiple site layouts with minimal code.
+     *
+     * @since 1.0.0
+     *
+     * @param array $classes Existing body classes.
+     * @return array Amended body classes.
+     */
+    function genesis_layout_body_classes(array $classes)
+    {
+    }
+    /**
+     * Adds a `genesis-title-hidden` body class if title output is suppressed on the current page.
+     *
+     * @since 3.1.0
+     *
+     * @param array $classes Existing body classes.
+     * @return array Amended body classes.
+     */
+    function genesis_title_hidden_body_class(array $classes)
+    {
+    }
+    /**
+     * Adds a `genesis-breadcrumbs-hidden` body class if breadcrumbs are hidden on the current page.
+     *
+     * @since 3.1.0
+     *
+     * @param array $classes Existing body classes.
+     * @return array Amended body classes.
+     */
+    function genesis_breadcrumbs_hidden_body_class(array $classes)
+    {
+    }
+    /**
+     * Adds a `genesis-singular-image-hidden` body class if “hide featured image” is enabled.
+     *
+     * @since 3.1.0
+     *
+     * @param array $classes Existing body classes.
+     * @return array Amended body classes.
+     */
+    function genesis_singular_image_hidden_body_class(array $classes)
+    {
+    }
+    /**
+     * Adds a `genesis-singular-image-visible` body class.
+     *
+     * @since 3.1.1
+     *
+     * @param array $classes Existing body classes.
+     * @return array Amended body classes.
+     */
+    function genesis_singular_image_visible_body_class(array $classes)
+    {
+    }
+    /**
+     * Adds `genesis-footer-widgets-hidden` and genesis-footer-widgets-visible` body classes if footer widgets
+     * are supported by the child theme and the Footer Widgets Panel is available in the Genesis Sidebar.
+     *
+     * @since 3.2.0
+     *
+     * @param array $classes Existing body classes.
+     * @return array Amended body classes.
+     */
+    function genesis_footer_widgets_hidden_body_class(array $classes)
+    {
+    }
+    /**
+     * Add archive-no-results body class on empty archive pages.
+     *
+     * Allows CSS styling of archive pages that have no results.
+     *
+     * @since 2.2.0
+     *
+     * @global WP_Query $wp_query Query object.
+     *
+     * @param array $classes Existing body classes.
+     * @return array Amended body classes.
+     */
+    function genesis_archive_no_results_body_class(array $classes)
+    {
+    }
+    /**
+     * Add style selector classes to the body classes.
+     *
+     * Enables style selector support in child themes, which helps us achieve multiple site styles with minimal code.
+     *
+     * @since 1.8.0
+     *
+     * @param array $classes Existing body classes.
+     * @return array Amended body classes.
+     */
+    function genesis_style_selector_body_classes(array $classes)
+    {
+    }
+    /**
+     * Adds a custom class to the custom post type archive body classes.
+     *
+     * It accepts a value from the archive settings page.
+     *
+     * @since 2.0.0
+     *
+     * @param array $classes Existing body classes.
+     * @return array Amended body classes.
+     */
+    function genesis_cpt_archive_body_class(array $classes)
+    {
+    }
+    /**
+     * Output the sidebar.php file if layout allows for it.
+     *
+     * @since 1.0.0
+     */
+    function genesis_get_sidebar()
+    {
+    }
+    /**
+     * Output the sidebar_alt.php file if layout allows for it.
+     *
+     * @since 1.0.0
+     */
+    function genesis_get_sidebar_alt()
+    {
+    }
+    /**
+     * Attach a loop to the `genesis_loop` output hook so we can get some front-end output.
+     *
+     * @since 1.1.0
+     */
+    function genesis_do_loop()
+    {
+    }
+    /**
+     * Standard loop, meant to be executed without modification in most circumstances where content needs to be displayed.
+     *
+     * It outputs basic wrapping HTML, but uses hooks to do most of its content output like title, content, post information
+     * and comments.
+     *
+     * The action hooks called are:
+     *
+     *  - `genesis_before_entry`
+     *  - `genesis_entry_header`
+     *  - `genesis_before_entry_content`
+     *  - `genesis_entry_content`
+     *  - `genesis_after_entry_content`
+     *  - `genesis_entry_footer`
+     *  - `genesis_after_endwhile`
+     *  - `genesis_loop_else` (only if no posts were found)
+     *
+     * @since 1.1.0
+     *
+     * @return void Return early after legacy loop if not supporting HTML5.
+     */
+    function genesis_standard_loop()
+    {
+    }
+    /**
+     * Custom loop, meant to be executed when a custom query is needed.
+     *
+     * It accepts arguments in query_posts style format to modify the custom `WP_Query` object.
+     *
+     * It outputs basic wrapping HTML, but uses hooks to do most of its content output like title, content, post information,
+     * and comments.
+     *
+     * The arguments can be passed in via the `genesis_custom_loop_args` filter.
+     *
+     * The action hooks called are the same as {@link genesis_standard_loop()}.
+     *
+     * @since 1.1.0
+     *
+     * @global WP_Query $wp_query Query object.
+     * @global int      $more
+     *
+     * @param array $args Loop configuration.
+     */
+    function genesis_custom_loop($args = [])
+    {
+    }
+    /**
+     * The grid loop - a specific implementation of a custom loop.
+     *
+     * Outputs markup compatible with a Feature + Grid style layout.
+     *
+     * The arguments can be filtered by the `genesis_grid_loop_args` filter.
+     *
+     * @since 1.5.0
+     *
+     * @global array $_genesis_loop_args Associative array for grid loop configuration.
+     *
+     * @param array $args Associative array for grid loop configuration.
+     */
+    function genesis_grid_loop($args = [])
+    {
+    }
+    /**
+     * Filter the post classes to output custom classes for the feature and grid layout.
+     *
+     * Based on the grid loop args and the loop counter.
+     *
+     * Applies the `genesis_grid_loop_post_class` filter.
+     *
+     * The `&1` is a test to see if it is odd. `2&1 = 0` (even), `3&1 = 1` (odd).
+     *
+     * @since 1.5.0
+     *
+     * @global array    $_genesis_loop_args Associative array for grid loop config.
+     * @global WP_Query $wp_query           Query object.
+     *
+     * @param array $classes Existing post classes.
+     * @return array Amended post classes.
+     */
+    function genesis_grid_loop_post_class(array $classes)
+    {
+    }
+    /**
+     * Output specially formatted content, based on the grid loop args.
+     *
+     * @since 1.5.0
+     *
+     * @global array $_genesis_loop_args Associative array for grid loop configuration.
+     */
+    function genesis_grid_loop_content()
+    {
+    }
+    /**
+     * Modify the global $_genesis_displayed_ids each time a loop iterates.
+     *
+     * Keep track of what posts have been shown on any given page by adding each ID to a global array, which can be used any
+     * time by other loops to prevent posts from being displayed twice on a page.
+     *
+     * @since 2.0.0
+     *
+     * @global array $_genesis_displayed_ids Array of displayed post IDs.
+     */
+    function genesis_add_id_to_global_exclude()
+    {
+    }
+    /**
+     * Pass nav menu link attributes through attribute parser.
+     *
+     * Adds nav menu link attributes via the Genesis markup API.
+     *
+     * @since 2.2.0
+     *
+     * @param array $atts {
+     *      The HTML attributes applied to the menu item's link element, empty strings are ignored.
+     *
+     *      @type string $title Title attribute.
+     *      @type string $target Target attribute.
+     *      @type string $rel The rel attribute.
+     *      @type string $href The href attribute.
+     * }
+     * @return array Maybe modified menu attributes array.
+     */
+    function genesis_nav_menu_link_attributes($atts)
+    {
+    }
+    /**
+     * Register the custom menu locations, if theme has support for them.
+     *
+     * Does the `genesis_register_nav_menus` action.
+     *
+     * @since 1.8.0
+     *
+     * @return void Return early if `genesis-menus` are not supported.
+     */
+    function genesis_register_nav_menus()
+    {
+    }
+    /**
+     * Echo the "Primary Navigation" menu.
+     *
+     * Applies the `genesis_do_nav` filter.
+     *
+     * @since 1.0.0
+     */
+    function genesis_do_nav()
+    {
+    }
+    /**
+     * Echo the "Secondary Navigation" menu.
+     *
+     * Applies the `genesis_do_subnav` filter.
+     *
+     * @since 1.0.0
+     */
+    function genesis_do_subnav()
+    {
+    }
+    /**
+     * Genesis Framework.
+     *
+     * WARNING: This file is part of the core Genesis Framework. DO NOT edit this file under any circumstances.
+     * Please do all modifications in the form of a child theme.
+     *
+     * @package Genesis\Entry
+     * @author  StudioPress
+     * @license GPL-2.0-or-later
+     * @link    https://my.studiopress.com/themes/genesis/
+     */
+    /**
+     * Restore all default post loop output by re-hooking all default functions.
+     *
+     * Useful in the event that you need to unhook something in a particular context, but don't want to restore it for all
+     * subsequent loop instances.
+     *
+     * Calls `genesis_reset_loops` action after everything has been re-hooked.
+     *
+     * @since 1.5.0
+     *
+     * @global array $_genesis_loop_args Associative array for grid loop configuration.
+     */
+    function genesis_reset_loops()
+    {
+    }
+    /**
+     * Add `entry` post class, remove `hentry` post class if HTML5.
+     *
+     * @since 1.9.0
+     *
+     * @param array $classes Existing post classes.
+     * @return array Amended post classes. Not modified if in WP admin, or doing Ajax request.
+     */
+    function genesis_entry_post_class($classes)
+    {
+    }
+    /**
+     * Add a custom post class, saved as a custom field.
+     *
+     * @since 1.4.0
+     *
+     * @param array $classes Existing post classes.
+     * @return array Amended post classes. Not modified if in WP admin.
+     */
+    function genesis_custom_post_class(array $classes)
+    {
+    }
+    /**
+     * Featured Image Post Class
+     *
+     * @since 2.2.0
+     *
+     * @param array $classes Existing post classes.
+     * @return array Amended post classes. Not modified if in WP admin.
+     */
+    function genesis_featured_image_post_class($classes)
+    {
+    }
+    /**
+     * Add a post format icon.
+     *
+     * Adds an image, corresponding to the post format, before the post title.
+     *
+     * @since 1.4.0
+     *
+     * @return void Return early if `post-formats` or `genesis-post-format-images` are not supported.
+     */
+    function genesis_do_post_format_image()
+    {
+    }
+    /**
+     * Is the entry header hidden for the current page?
+     *
+     * Indicates that the “Hide title” checkbox is enabled and checked.
+     *
+     * @since 3.1.0
+     *
+     * @return bool True if title is hidden, false otherwise.
+     */
+    function genesis_entry_header_hidden_on_current_page()
+    {
+    }
+    /**
+     * Echo the opening structural markup for the entry header.
+     *
+     * @since 3.1.0 Suppress output if “hide title” checkbox is ticked.
+     * @since 2.0.0
+     */
+    function genesis_entry_header_markup_open()
+    {
+    }
+    /**
+     * Echo the closing structural markup for the entry header.
+     *
+     * @since 3.1.0 Suppress output if “hide title” checkbox is ticked.
+     * @since 2.0.0
+     */
+    function genesis_entry_header_markup_close()
+    {
+    }
+    /**
+     * Echo the title of a post.
+     *
+     * The `genesis_post_title_text` filter is applied on the text of the title, while the `genesis_post_title_output`
+     * filter is applied on the echoed markup.
+     *
+     * @since 3.1.0 Suppress output if “hide title” checkbox is ticked.
+     * @since 1.1.0
+     *
+     * @return void Return early if the filtered trimmed title is an empty string.
+     */
+    function genesis_do_post_title()
+    {
+    }
+    /**
+     * Echo the post info (byline) under the post title.
+     *
+     * By default, only does post info on posts.
+     *
+     * The post info makes use of several shortcodes by default, and the whole output
+     * is filtered via `genesis_post_info` before echoing.
+     *
+     * @since 1.0.0
+     *
+     * @return void Return early if post type lacks support for `genesis-entry-meta-before-content`.
+     */
+    function genesis_post_info()
+    {
+    }
+    /**
+     * Echo the post image on archive pages.
+     *
+     * If this an archive page and the option is set to show thumbnail, then it gets the image size as per the theme
+     * setting, wraps it in the post permalink and echoes it.
+     *
+     * @since 1.1.0
+     */
+    function genesis_do_post_image()
+    {
+    }
+    /**
+     * Gets the singular image for the current post.
+     *
+     * Applies the `genesis_singular_image_size` filter.
+     *
+     * @since 3.1.1.
+     *
+     * @return string|bool Singular image element HTML or `false`.
+     */
+    function genesis_get_singular_image()
+    {
+    }
+    /**
+     * Echoes the post image on singular pages.
+     *
+     * If this is a singular page and the option is set to show the features image, then it gets the image size
+     * as per the post type supports and echoes it.
+     *
+     * @since 3.1.0
+     */
+    function genesis_do_singular_image()
+    {
+    }
+    /**
+     * Echo the post content.
+     *
+     * On single posts or pages it echoes the full content, and optionally the trackback string if enabled. On single pages,
+     * also adds the edit link after the content.
+     *
+     * Elsewhere it displays either the excerpt, limited content, or full content.
+     *
+     * Applies the `genesis_edit_post_link` filter.
+     *
+     * @since 1.1.0
+     */
+    function genesis_do_post_content()
+    {
+    }
+    /**
+     * Display page links for paginated posts (i.e. includes the <!--nextpage--> Quicktag one or more times).
+     *
+     * @since 2.0.0
+     */
+    function genesis_do_post_content_nav()
+    {
+    }
+    /**
+     * Show permalink if no title.
+     *
+     * If the entry has no title, this is a way to display a link to the full post.
+     *
+     * Applies the `genesis_post_permalink` filter.
+     *
+     * @since 2.0.0
+     */
+    function genesis_do_post_permalink()
+    {
+    }
+    /**
+     * Echo filterable content when there are no posts to show.
+     *
+     * The applied filter is `genesis_noposts_text`.
+     *
+     * @since 1.1.0
+     */
+    function genesis_do_noposts()
+    {
+    }
+    /**
+     * Echo the opening structural markup for the entry footer.
+     *
+     * @since 2.0.0
+     */
+    function genesis_entry_footer_markup_open()
+    {
+    }
+    /**
+     * Echo the closing structural markup for the entry footer.
+     *
+     * @since 2.0.0
+     */
+    function genesis_entry_footer_markup_close()
+    {
+    }
+    /**
+     * Echo the post meta after the post content.
+     *
+     * By default, does post meta on all public post types except page.
+     *
+     * The post info makes use of a couple of shortcodes by default, and the whole output is filtered via
+     * `genesis_post_meta` before echoing.
+     *
+     * @since 1.0.0
+     *
+     * @return void Return early if post type lacks support for `genesis-entry-meta-after-content`.
+     */
+    function genesis_post_meta()
+    {
+    }
+    /**
+     * Conditionally add the author box after single posts or pages.
+     *
+     * @since 1.0.0
+     *
+     * @return void Return early if not a single post or page, or post type does not support `author`.
+     */
+    function genesis_do_author_box_single()
+    {
+    }
+    /**
+     * Return the author box and its contents.
+     *
+     * @since 2.7.0
+     *
+     * @global WP_User $authordata Author (user) object.
+     *
+     * @param string $context Optional. Allows different author box markup for different contexts, specifically 'single'.
+     *                        Default is empty string.
+     * @return string HTML for author box.
+     */
+    function genesis_get_author_box($context = '')
+    {
+    }
+    /**
+     * Return the author box and its contents by WP_User ID.
+     *
+     * The title is filterable via `genesis_author_box_title`,
+     *      the description is filterable via `genesis_author_box_description`,
+     *      and the gravatar size is filterable via `genesis_author_box_gravatar_size`.
+     *
+     * The final output is filterable via `genesis_author_box`, which passes many variables through.
+     *
+     * @since 2.7.0
+     *
+     * @param  int    $user_id Required. The user ID to get the author box from.
+     * @param  string $context Optional. Allows different author box markup for different contexts, specifically 'single'.
+     *                         Default is empty string.
+     * @return string HTML for author box.
+     */
+    function genesis_get_author_box_by_user($user_id, $context = '')
+    {
+    }
+    /**
+     * Echo the author box and its contents.
+     *
+     * The title is filterable via `genesis_author_box_title`, and the gravatar size is filterable via
+     * `genesis_author_box_gravatar_size`.
+     *
+     * The final output is filterable via `genesis_author_box`, which passes many variables through.
+     *
+     * @since 1.3.0
+     * @since 2.7.0 Logic moved to `genesis_get_author_box()` and second parameter deprecated.
+     *
+     * @param string $context    Optional. Allows different author box markup for different contexts, specifically 'single'.
+     *                           Default is empty string.
+     * @param bool   $deprecated Deprecated.
+     * @return string HTML for author box if `$deprecated` param is falsy.
+     */
+    function genesis_author_box($context = '', $deprecated = \null)
+    {
+    }
+    /**
+     * Display after-entry widget area on the genesis_after_entry action hook.
+     *
+     * @since 2.1.0
+     *
+     * @return void Return early if not singular, or post type does not support after entry widget area.
+     */
+    function genesis_after_entry_widget_area()
+    {
+    }
+    /**
+     * Conditionally echo archive pagination in a format dependent on chosen setting.
+     *
+     * This is shown at the end of archives to get to another page of entries.
+     *
+     * @since 1.0.0
+     */
+    function genesis_posts_nav()
+    {
+    }
+    /**
+     * Echo archive pagination in Previous Posts / Next Posts format.
+     *
+     * Applies `genesis_prev_link_text` and `genesis_next_link_text` filters.
+     *
+     * @since 1.0.0
+     */
+    function genesis_prev_next_posts_nav()
+    {
+    }
+    /**
+     * Echo archive pagination in page numbers format.
+     *
+     * Applies the `genesis_prev_link_text` and `genesis_next_link_text` filters.
+     *
+     * The links, if needed, are ordered as:
+     *
+     *  * previous page arrow,
+     *  * first page,
+     *  * up to two pages before current page,
+     *  * current page,
+     *  * up to two pages after the current page,
+     *  * last page,
+     *  * next page arrow.
+     *
+     * @since 1.0.0
+     *
+     * @global WP_Query $wp_query Query object.
+     *
+     * @return void Return early if on a single post or page, or only one page exists.
+     */
+    function genesis_numeric_posts_nav()
+    {
+    }
+    /**
+     * Display links to previous and next entry.
+     *
+     * @since 2.3.0
+     *
+     * @return void Return early if not singular or post type doesn't support `genesis-adjacent-entry-nav`.
+     */
+    function genesis_adjacent_entry_nav()
+    {
+    }
+    /**
+     * Helper function to display adjacent entry navigation on single posts. Must be hooked to `genesis_after_entry` at priority 10 or earlier to work properly.
+     *
+     * @since 1.5.1
+     */
+    function genesis_prev_next_post_nav()
+    {
+    }
+    /**
+     * Echo primary sidebar default content.
+     *
+     * Only shows if sidebar is empty, and current user has the ability to edit theme options (manage widgets).
+     *
+     * @since 1.2.0
+     */
+    function genesis_do_sidebar()
+    {
+    }
+    /**
+     * Echo alternate sidebar default content.
+     *
+     * Only shows if sidebar is empty, and current user has the ability to edit theme options (manage widgets).
+     *
+     * @since 1.2.0
+     */
+    function genesis_do_sidebar_alt()
+    {
+    }
+    /**
+     * Template for default widget area content.
+     *
+     * @since 2.0.0
+     *
+     * @param string $name Name of the widget area e.g. `__( 'Secondary Sidebar Widget Area', 'yourtextdomain' )`.
+     */
+    function genesis_default_widget_area_content($name)
+    {
+    }
 }

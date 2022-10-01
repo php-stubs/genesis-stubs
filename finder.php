@@ -2,6 +2,7 @@
 
 return \StubsGenerator\Finder::create()
     ->in('source/genesis/lib/functions')
+    ->in('source/genesis/lib/structure')
     ->append(\StubsGenerator\Finder::create()
             ->in(['source/genesis/lib'])
             ->files()

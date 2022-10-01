@@ -13,8 +13,8 @@
         "php-stubs/wordpress-stubs": "^5.3.0"
     },
     "require-dev": {
-        "php": "~7.1",
-        "giacocorsiglia/stubs-generator": "^0.5.0"
+        "php": "~7.4",
+        "php-stubs/generator": "^0.8.0"
     },
     "suggest": {
         "szepeviktor/phpstan-wordpress": "WordPress extensions for PHPStan",
