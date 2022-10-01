@@ -11,10 +11,6 @@ cache:
 
 php:
   - "7.4"
-  - "7.3"
-  - "7.2"
-  - "7.1"
-  # giacocorsiglia/stubs-generator does not support PHP 7.0
 
 before_install:
   - "phpenv config-rm xdebug.ini"
